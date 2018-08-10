@@ -3,7 +3,7 @@ import React from 'react';
 
 function Location(props){
     return (
-        <div id="Location">
+        <div id="Location" className="gen">
             <h4>Address : </h4> <p>{props.address}</p>
             <h4>Latitude : </h4> <p>{props.latitude}</p>
             <h4>Longitude : </h4> <p>{props.longitude}</p>

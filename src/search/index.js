@@ -22,10 +22,12 @@ class Search extends React.Component{
 
     render(){
         return (
+        <div id="Search" className="gen">
             <form onSubmit={this.handleSubmit}>
                 <input type="text" value={this.state.searchValue} onChange={this.handleChange} />
                 <input type="submit" value="Search!"/>
             </form>
+        </div>    
         );
     }
 }
