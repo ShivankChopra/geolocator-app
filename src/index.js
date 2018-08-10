@@ -46,7 +46,7 @@ class App extends React.Component{
          + this.state.longitude;
 
         axios.get("https://api.sunrise-sunset.org/json?lat=28.5793261&lng=77.3207532")
-         .then(function(response){
+         .then(response => {
             let res = response.data.results;
             this.setState({
                 sunrise: res.sunrise,
@@ -62,7 +62,7 @@ class App extends React.Component{
             <div id="App">
                 <Search handleSearch={() => this.handleSearch()}/>
                 <Location address={this.state.address} latitude={this.state.latitude} longitude={this.state.longitude}/>
-                <SolarInfo sunrise={this.state.sunrise} sunset={this.state.sunset} solarNoon={this.state.solar_noon} dayLength={this.state.dayLength}/>
+                <SolarInfo sunrise={this.state.sunrise} sunset={this.state.sunset} solarNoon={this.state.solarNoon} dayLength={this.state.dayLength}/>
             </div>
         );
     }
